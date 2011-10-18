@@ -61,8 +61,8 @@ public class SimpleViewPagerforAndroidActivity extends Activity {
 		}
 
 		@Override
-		public void destroyItem(View collection, int arg1, Object object) {
-			((ViewPager) collection).removeView((LinearLayout) object);
+		public void destroyItem(View view, int arg1, Object object) {
+			((ViewPager) view).removeView((LinearLayout) object);
 		}
 
 		@Override
@@ -76,10 +76,10 @@ public class SimpleViewPagerforAndroidActivity extends Activity {
 		}
 
 		@Override
-		public Object instantiateItem(View collection, int position) {
-			View view = views.get(position);
-			((ViewPager) collection).addView(view);
-			return view;
+		public Object instantiateItem(View view, int position) {
+			View myView = views.get(position);
+			((ViewPager) view).addView(myView);
+			return myView;
 		}
 
 		@Override
